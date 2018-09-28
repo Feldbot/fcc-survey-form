@@ -74,12 +74,14 @@ fieldset {
     position: absolute;
     opacity: 0;
     cursor: pointer; }
-
-.container:first-of-type {
-  margin-top: 5px; }
-
-.container:last-of-type {
-  margin-bottom: 5px; }
+  .container:hover input ~ span {
+    background-color: #ccc; }
+  .container input:checked ~ span {
+    background-color: #ff6666; }
+  .container:first-of-type {
+    margin-top: 5px; }
+  .container:last-of-type {
+    margin-bottom: 5px; }
 
 span {
   position: absolute;
@@ -88,12 +90,6 @@ span {
   height: 20px;
   width: 20px;
   background-color: #eee; }
-
-.container:hover input ~ span {
-  background-color: #ccc; }
-
-.container input:checked ~ span {
-  background-color: #ff6666; }
 
 span:after {
   position: absolute;

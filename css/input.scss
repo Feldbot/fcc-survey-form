@@ -98,14 +98,24 @@ fieldset {
     opacity: 0;
     cursor: pointer;
   }
+  // On mouseover add grey bg color - see Notes 2)
+  &:hover input ~ span {
+    background-color: #ccc;
+  }
+  // When input is checked add background color
+  // Needs to cascade after previous
+  input:checked ~ span {
+    background-color: $pink;
+  }
+  // Vertical spacing
+  &:first-of-type {
+    margin-top: 5px;
+  }
+  &:last-of-type {
+    margin-bottom: 5px;
+  }
 }
-// Vertical spacing
-.container:first-of-type {
-  margin-top: 5px;
-}
-.container:last-of-type {
-  margin-bottom: 5px;
-}
+
 // Create custom radio button and checkbox on spans
 span {
   position: absolute;
@@ -115,14 +125,7 @@ span {
   width: 20px;
   background-color: #eee;
 }
-// On mouseover add grey bg color - see Notes 2)
-.container:hover input ~ span {
-  background-color: #ccc;
-}
-// When input is checked add background color
-.container input:checked ~ span {
-  background-color: $pink;
-}
+
 // Create the indicator dot/x (hide until selected)
 span:after {
   position: absolute;
