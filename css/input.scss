@@ -57,13 +57,13 @@ form {
   display: flex;
   // Targets cross-axis (columns)
   align-items: center;
-}
-.textfield label {
-  min-width: 70px;
-}
-.textfield input {
-  width: 75%;
-  padding: 5px 10px;
+  label {
+    min-width: 70px;
+  }
+  input {
+    width: 75%;
+    padding: 5px 10px;
+  }
 }
 
 .dropdown {
@@ -92,18 +92,19 @@ fieldset {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  // Hide user-agent radio button
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
 }
+// Vertical spacing
 .container:first-of-type {
   margin-top: 5px;
 }
 .container:last-of-type {
   margin-bottom: 5px;
-}
-// Hide user-agent radio button
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
 }
 // Create custom radio button and checkbox on spans
 span {
@@ -113,12 +114,6 @@ span {
   height: 20px;
   width: 20px;
   background-color: #eee;
-}
-.radio-btn-span {
-  border-radius: 50%;
-}
-.checkbox-span {
-  border-radius: 5px;
 }
 // On mouseover add grey bg color - see Notes 2)
 .container:hover input ~ span {
@@ -137,7 +132,11 @@ span:after {
 .container input:checked ~ span:after {
   display: block;
 }
-// Style the radio dot
+// Radio button shape
+.radio-btn-span {
+  border-radius: 50%;
+}
+// Dot indicator
 .radio-btn-span:after {
   content: '';
   top: 7px;
@@ -147,7 +146,11 @@ span:after {
   border-radius: 50%;
   background: #fff;
 }
-// Style the checkmark
+// Checkbox shape
+.checkbox-span {
+  border-radius: 5px;
+}
+// X indicator
 .checkbox-span:after {
   content: 'x';
   top: 1px;
@@ -197,12 +200,13 @@ button:hover {
   .textfield {
     width: 80%;
     margin: 0 auto;
+    label {
+      text-align: right;
+      min-width: 100px;
+      padding-right: 20px;
+    }
   }
-  .textfield label {
-    text-align: right;
-    min-width: 100px;
-    padding-right: 20px;
-  }
+
   #dropdown {
     margin-left: 50px;
     width: 130px;
