@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build a Survey Form - Free Code Camp</title>
+  <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <h1 id="title">Garbage Survey Form</h1>
+    <form id="survey-form" action=""
+          onsubmit="event.preventDefault(); surveyCompleteMsg();">
+      <p id="description"><em>Please let us know how we can improve.</em></p>
+
+      <!-- Text field inputs  -->
+      <div class="textfield">
+        <label for="name" id="name-label">* Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
+
+      <div class="textfield">
+        <label for="email" id="email-label">* Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="textfield">
+        <label for="number" id="number-label">* Age</label>
+        <input type="number" id="number" placeholder="Enter your age" min="1" max="122" required/>
+      </div>
+      <span class="validity"></span>
+
+      <!-- Dropdown selector -->
+      <div class="dropdown">
+        <label for="">Which option best describes your occupancy?</label>
+        <select id="dropdown" name="choice">
+          <option >Please choose an option</option>
+          <option value="homeowner" selected>Homeowner</option>
+          <option value="renter">Renter</option>
+          <option value="commercial">Commercial</option>
+          <option value="squatter">Squatter</option>
+        </select>
+      </div>
+
+      <!-- Radio buttons -->
+      <fieldset>
+        <legend>Are you satisfied with our garbage service?</legend>
+        <div class="radio-btn">
+          <input type="radio" id="overjoyed"
+                 name="satisfaction" value="overjoyed" checked>
+          <label for="overjoyed">Overjoyed</label>
+        </div>
+
+        <div class="radio-btn">
+          <input type="radio" id="disappointed"
+                 name="satisfaction" value="disappointed">
+          <label for="disappointed">Disappointed</label>
+        </div>
+
+        <div class="radio-btn">
+          <input type="radio" id="horrified"
+                 name="satisfaction" value="horrified">
+          <label for="horrified">Horrified</label>
+        </div>
+      </fieldset>
+
+      <!-- Checkboxes -->
+      <fieldset class="checkbox">
+        <legend>How can we improve? Check all that apply.</legend>
+        <div>
+          <input type="checkbox" id="hazmat"
+          name="improvements" value="hazmat">
+          <label for="hazmat">Wear full hazmat suits</label>
+        </div>
+        <div>
+          <input type="checkbox" id="whistle"
+                 name="improvements" value="whistle">
+          <label for="whistle">Whistle while we work</label>
+        </div>
+        <div>
+          <input type="checkbox" id="rummage"
+          name="improvements" value="rummage">
+          <label for="rummage">Rummage for goodies</label>
+        </div>
+        <div>
+          <input type="checkbox" id="gentle"
+                 name="improvements" value="gentle">
+          <label for="gentle">Toss trash gently</label>
+        </div>
+        <div>
+          <input type="checkbox" id="cackle"
+                 name="improvements" value="cackle">
+          <label for="cackle">Cackle and swear</label>
+        </div>
+        <div>
+          <input type="checkbox" id="ask"
+          name="improvements" value="ask">
+          <label for="ask">Ask how we did</label>
+        </div>
+      </fieldset>
+
+      <!-- Textarea -->
+      <div>
+        <label for="text">Have any trashy comments or suggestions?</label>
+        <textarea id="text" name="moreinfo"
+                  rows="5"  maxlength="250"
+                  wrap="hard" placeholder="Enter your comments"></textarea>
+      </div>
+
+      <button type="submit" id="submit"
+              value="Send Request">Submit</button>
+    </form>
+  </main>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
