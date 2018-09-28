@@ -11,9 +11,9 @@
 </head>
 <body>
   <main>
-    <h1 id="title">Garbage Survey Form</h1>
     <form id="survey-form" action=""
           onsubmit="event.preventDefault(); surveyCompleteMsg();">
+      <h1 id="title">Garbage Survey Form</h1>
       <p id="description"><em>Please let us know how we can improve.</em></p>
 
       <!-- Text field inputs  -->
@@ -48,58 +48,70 @@
       <!-- Radio buttons -->
       <fieldset>
         <legend>Are you satisfied with our garbage service?</legend>
-        <div class="radio-btn">
+        <label for="overjoyed"
+               class="container">Overjoyed
           <input type="radio" id="overjoyed"
                  name="satisfaction" value="overjoyed" checked>
-          <label for="overjoyed">Overjoyed</label>
-        </div>
+          <span class="radio-btn-span"></span>
+        </label>
 
-        <div class="radio-btn">
+        <label for="disappointed"
+               class="container">Disappointed
           <input type="radio" id="disappointed"
                  name="satisfaction" value="disappointed">
-          <label for="disappointed">Disappointed</label>
-        </div>
+          <span class="radio-btn-span"></span>
+        </label>
 
-        <div class="radio-btn">
+        <label for="horrified"
+               class="container">Horrified
           <input type="radio" id="horrified"
                  name="satisfaction" value="horrified">
-          <label for="horrified">Horrified</label>
-        </div>
+          <span class="radio-btn-span"></span>
+        </label>
       </fieldset>
 
       <!-- Checkboxes -->
       <fieldset class="checkbox">
         <legend>How can we improve? Check all that apply.</legend>
-        <div>
+        <label for="hazmat"
+               class="container">
+               Wear full hazmat suits
           <input type="checkbox" id="hazmat"
           name="improvements" value="hazmat">
-          <label for="hazmat">Wear full hazmat suits</label>
-        </div>
-        <div>
+          <span class="checkbox-span"></span>
+        </label>
+
+        <label for="whistle"
+               class="container">
+               Whistle while we work
           <input type="checkbox" id="whistle"
                  name="improvements" value="whistle">
-          <label for="whistle">Whistle while we work</label>
-        </div>
-        <div>
+          <span class="checkbox-span"></span>
+        </label>
+
+        <label for="rummage"
+               class="container">
+               Rummage for goodies
           <input type="checkbox" id="rummage"
-          name="improvements" value="rummage">
-          <label for="rummage">Rummage for goodies</label>
-        </div>
-        <div>
+                 name="improvements" value="rummage">
+          <span class="checkbox-span"></span>
+        </label>
+
+        <label for="gentle"
+               class="container">
+               Throw trash gently
           <input type="checkbox" id="gentle"
                  name="improvements" value="gentle">
-          <label for="gentle">Toss trash gently</label>
-        </div>
-        <div>
+          <span class="checkbox-span"></span>
+        </label>
+
+        <label for="cackle"
+               class="container">
+               Cackle and swear
           <input type="checkbox" id="cackle"
                  name="improvements" value="cackle">
-          <label for="cackle">Cackle and swear</label>
-        </div>
-        <div>
-          <input type="checkbox" id="ask"
-          name="improvements" value="ask">
-          <label for="ask">Ask how we did</label>
-        </div>
+          <span class="checkbox-span"></span>
+        </label>
       </fieldset>
 
       <!-- Textarea -->
