@@ -1,6 +1,6 @@
 # Build a Survey Form
 
-The [Build a Survey Form](https://feldbot.github.io/fcc-survey-form/) project is part of Free Code Camp's Responsive Web Design certificate curriculum. The [project requirements](https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form/) are to create a responsive form that passes integrated tests.         
+The [Build a Survey Form](https://feldbot.github.io/fcc-survey-form/) project is part of Free Code Camp's Responsive Web Design certificate curriculum. The [project requirements](https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form/) are to create a responsive form that uses HTML5 validation and passes integrated tests.         
 
 ## Built With
 
@@ -17,7 +17,7 @@ The [Build a Survey Form](https://feldbot.github.io/fcc-survey-form/) project is
 
 ## Testing
 
-Free Code Camp integrates testing to ensure projects pass requirements. Tests are embedded into the page and accessible from the menu at top left. 
+Free Code Camp integrates testing to ensure projects pass requirements. Tests are embedded into the page and accessible from the menu at top left.
 
 ## Author
 
